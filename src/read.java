@@ -2,10 +2,10 @@ import java.sql.*;
 public class read{
     public static void  main(String arg[]) throws ClassNotFoundException{
 
-        String url="jdbc:mysql://localhost:3306/company";
+        String url="jdbc:mysql://localhost:3306/information";
         String username="root";
         String password="aditya@2003#03";
-        String query="Select * from employee";
+        String query="Select * from students";
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -23,15 +23,15 @@ public class read{
             while(rs.next()){
                 int id=rs.getInt("id");
                 String name=rs.getString("name");
-                String post =rs.getString("post");
-               String salary=rs.getString("salary");
+                int age =rs.getInt("age");
+//                String class=rs.getString("class");
 
                 System.out.println("*************");
                 System.out.println();
                 System.out.println("ID: "+id);
                 System.out.println("Name: "+name);
-                System.out.println("POST: "+post);
-               System.out.println("Salary: "+salary);
+                System.out.println("AGE: "+age);
+//                System.out.println("Fees: "+fees);
             }
 
             System.out.println();
