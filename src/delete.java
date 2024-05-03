@@ -1,3 +1,5 @@
+//DELETE OPERATIONS ----
+
 import java.sql.*;
 public class delete {
     public static void main(String[] args) {
